@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guía completa basada en evidencia científica sobre cuándo realmente necesitas suplementos vitamínicos. Incluye referencias actualizadas 2024-2025.">
+    <meta name="keywords" content="suplementos, vitaminas, salud, nutrición, evidencia científica">
+    <meta property="og:title" content="Suplementación Inteligente: ¿Cuándo realmente necesitas vitaminas?">
+    <meta property="og:description" content="La ciencia te dice qué suplementos funcionan y cuáles son puro marketing">
+    <meta property="og:type" content="website">
+    <title>Suplementación Inteligente - Guía Basada en Ciencia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+        }
+        
+        .version-selector {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: white;
+            padding: 15px 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .version-selector button {
+            padding: 12px 24px;
+            border: 2px solid #2a9d8f;
+            background: white;
+            color: #2a9d8f;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        .version-selector button:hover {
+            background: #2a9d8f;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .version-selector button.active {
+            background: #2a9d8f;
+            color: white;
+        }
+        
+        .infografia {
+            display: none;
+        }
+        
+        .infografia.active {
+            display: block;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2a9d8f 0%, #1a7a6f 100%);
+            padding: 60px 30px;
+            color: white;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+        
+        .header .subtitle {
+            font-size: clamp(18px, 3vw, 24px);
+            opacity: 0.95;
+        }
+        
+        .gancho {
+            background: #fff5e6;
+            padding: 40px 30px;
+            border-left: 6px solid #f4a261;
+        }
+        
+        .gancho-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .confused-person {
+            width: 100px;
+            height: 100px;
+            background: #f4a261;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            flex-shrink: 0;
+        }
+        
+        .gancho-text {
+            flex: 1;
+            min-width: 280px;
+        }
+        
+        .gancho h2 {
+            font-size: clamp(22px, 4vw, 28px);
+            color: #264653;
+            margin-bottom: 10px;
+        }
+        
+        .gancho p {
+            font-size: clamp(16px, 2.5vw, 18px);
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .mensaje-central {
+            background: linear-gradient(135deg, #2a9d8f 0%, #1a7a6f 100%);
+            padding: 50px 30px;
+            color: white;
+            text-align: center;
+        }
+        
+        .mensaje-central h3 {
+            font-size: clamp(26px, 4vw, 36px);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .mensaje-central p {
+            font-size: clamp(16px, 2.5vw, 20px);
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .proceso {
+            padding: 50px 30px;
+            background: white;
+        }
+        
+        .proceso h3 {
+            font-size: clamp(24px, 4vw, 32px);
+            color: #264653;
+            margin-bottom: 40px;
+            text-align: center;
+            font-weight: 700;
+        }
+        
+        .proceso-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .step {
+            text-align: center;
+            padding: 30px 20px;
+            background: #f8f9fa;
+            border-radius: 15px;
+        }
+        
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            background: #2a9d8f;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+        
+        .step h4 {
+            font-size: 20px;
+            color: #264653;
+            margin-bottom: 10px;
+        }
+        
+        .step p {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        .veredictos {
+            padding: 50px 30px;
+            background: #f8f9fa;
+        }
+        
+        .veredictos h3 {
+            font-size: clamp(24px, 4vw, 32px);
+            color: #264653;
+            margin-bottom: 40px;
+            text-align: center;
+            font-weight: 700;
+        }
+        
+        .veredictos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .veredicto-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            display: flex;
+            gap: 20px;
+        }
+        
+        .veredicto-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            flex-shrink: 0;
+        }
+        
+        .veredicto-icon.check {
+            background: #d4edda;
+            color: #28a745;
+        }
+        
+        .veredicto-icon.cross {
+            background: #f8d7da;
+            color: #dc3545;
+        }
+        
+        .veredicto-content h4 {
+            font-size: 18px;
+            color: #264653;
+            margin-bottom: 8px;
+        }
+        
+        .veredicto-content p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        .referencias {
+            font-size: 11px;
+            color: #999;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        
+        .recomendaciones {
+            padding: 50px 30px;
+            background: white;
+        }
+        
+        .recomendaciones h3 {
+            font-size: clamp(24px, 4vw, 32px);
+            color: #264653;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 700;
+        }
+        
+        .recomendaciones-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .recomendacion {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 4px solid #2a9d8f;
+        }
+        
+        .recomendacion h4 {
+            font-size: 18px;
+            color: #264653;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .recomendacion-icon {
+            font-size: 24px;
+        }
+        
+        .recomendacion p {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .cta {
+            background: linear-gradient(135deg, #f4a261 0%, #e76f51 100%);
+            padding: 50px 30px;
+            text-align: center;
+            color: white;
+        }
+        
+        .cta h3 {
+            font-size: clamp(26px, 4vw, 36px);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .cta p {
+            font-size: clamp(16px, 2.5vw, 18px);
+            margin-top: 15px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .cta-button {
+            background: white;
+            color: #f4a261;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+        }
+        
+        .footer {
+            background: #264653;
+            padding: 30px;
+            color: white;
+            text-align: center;
+        }
+        
+        .footer p {
+            font-size: 14px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                padding: 40px 20px;
+            }
+            .gancho, .proceso, .veredictos, .recomendaciones, .cta {
+                padding: 30px 20px;
+            }
+            .veredictos-grid, .recomendaciones-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="version-selector">
+            <button id="btn-profesional" class="active">👨‍⚕️ Profesionales</button>
+            <button id="btn-general">👥 Público General</button>
+            <button id="btn-social">📱 Redes Sociales</button>
+        </div>
+
+        <!-- VERSIÓN PROFESIONALES -->
+        <div id="profesional" class="infografia active">
+            <div class="header">
+                <h1>Suplementación Inteligente</h1>
+                <p class="subtitle">¿Cuándo realmente necesitas vitaminas y minerales?</p>
+            </div>
+            
+            <div class="gancho">
+                <div class="gancho-content">
+                    <div class="confused-person">🤔</div>
+                    <div class="gancho-text">
+                        <h2>¿Más suplementos = más salud?</h2>
+                        <p>El 52% de los adultos consume suplementos, pero estudios muestran que la mayoría no presenta deficiencias reales. La suplementación indiscriminada puede generar hipervitaminosis y desbalances metabólicos.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mensaje-central">
+                <h3>Principio Fundamental</h3>
+                <p>La suplementación debe ser una intervención dirigida basada en evidencia bioquímica, no una práctica preventiva generalizada. El enfoque ideal: diagnóstico preciso, intervención específica y monitoreo continuo.</p>
+            </div>
+            
+            <div class="proceso">
+                <h3>Protocolo Recomendado</h3>
+                <div class="proceso-steps">
+                    <div class="step">
+                        <div class="step-icon">🩺</div>
+                        <h4>Evaluación Clínica</h4>
+                        <p>Anamnesis detallada, identificación de factores de riesgo y evaluación de síntomas clínicos compatibles con deficiencias.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">🔬</div>
+                        <h4>Análisis Laboratoriales</h4>
+                        <p>Biomarcadores específicos: 25(OH)D, ferritina, B12 sérica, folato eritrocitario, según indicación clínica.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">💊</div>
+                        <h4>Intervención Dirigida</h4>
+                        <p>Suplementación con dosificación basada en niveles séricos, considerando biodisponibilidad y forma química óptima.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="veredictos">
+                <h3>Veredictos Científicos: Evidencia Actual</h3>
+                <div class="veredictos-grid">
+                    <div class="veredicto-card">
+                        <div class="veredicto-icon check">✓</div>
+                        <div class="veredicto-content">
+                            <h4>Vitamina D en deficiencia</h4>
+                            <p>Eficacia probada en pacientes con niveles < 20 ng/mL. Mejora salud ósea y función inmune.</p>
+                            <p class="referencias">Meta-análisis: Jolliffe et al., Lancet Diabetes Endocrinol 2025; Zheng et al., Front Nutr 2025</p>
+                        </div>
+                    </div>
+                    
+                    <div class="veredicto-card">
+                        <div class="veredicto-icon check">✓</div>
+                        <div class="veredicto-content">
+                            <h4>Ácido fólico prenatal</h4>
+                            <p>400-800 µg/día reduce defectos del tubo neural en 70%. Indicación perinatal obligatoria.</p>
+                            <p class="referencias">Revisión sistemática USPSTF: JAMA 2023; Meta-análisis: Front Pediatr 2024</p>
+                        </div>
+                    </div>
+                    
+                    <div class="veredicto-card">
+                        <div class="veredicto-icon check">✓</div>
+                        <div class="veredicto-content">
+                            <h4>B12 en vegetarianos estrictos</h4>
+                            <p>Suplementación esencial en dietas sin productos animales. Deficiencia en 52% de veganos no suplementados.</p>
+                            <p class="referencias">Meta-análisis: Niklewicz et al., Nutr Bull 2024; Scoping review: Nutrients 2024</p>
+                        </div>
+                    </div>
+                    
+                    <div class="veredicto-card">
+                        <div class="veredicto-icon check">✓</div>
+                        <div class="veredicto-content">
+                            <h4>Hierro en anemia ferropénica</h4>
+                            <p>Tratamiento de primera línea con ferritina < 30 µg/L. Dosificación: 100-200 mg/día de hierro elemental.</p>
+                            <p class="referencias">WHO Guidelines 2016</p>
+                        </div>
+                    </div>
+                    
+                    <div class="veredicto-card">
+                        <div class="veredicto-icon cross">✗</div>
+                        <div class="veredicto-content">
+                            <h4>Multivitamínicos en población sana</h4>
+                            <p>Sin beneficio cardiovascular o en mortalidad general. Revisiones sistemáticas: evidencia insuficiente para prevención primaria.</p>
+                            <p class="referencias">USPSTF 2022; Nature Rev Endocrinol 2021 (Pilz et al.)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="veredicto-card">
+                        <div class="veredicto-icon cross">✗</div>
+                        <div class="veredicto-content">
+                            <h4>Vitamina E para prevención</h4>
+                            <p>No reduce eventos cardiovasculares. Dosis altas (> 400 UI) pueden aumentar mortalidad.</p>
+                            <p class="referencias">Miller et al., Ann Intern Med 2005</p>
+                        </div>
+                    </div>
+                    
+                    <div class="veredicto-card">
+                        <div class="veredicto-icon cross">✗</div>
+                        <div class="veredicto-content">
+                            <h4>Vitamina C para resfriados</h4>
+                            <p>No previene resfriados en población general. Reducción mínima de duración (8%) sin relevancia clínica.</p>
+                            <p class="referencias">Cochrane: Hemilä & Chalker 2013 (estudio clásico referencial)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="veredicto-card">
+                        <div class="veredicto-icon cross">✗</div>
+                        <div class="veredicto-content">
+                            <h4>Calcio sin indicación médica</h4>
+                            <p>Suplementación rutinaria puede aumentar riesgo cardiovascular. Priorizar fuentes dietéticas.</p>
+                            <p class="referencias">Bolland et al., Heart 2016 (estudio metodológicamente relevante)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="recomendaciones">
+                <h3>Recomendaciones Basadas en Evidencia</h3>
+                <div class="recomendaciones-list">
+                    <div class="recomendacion">
+                        <h4><span class="recomendacion-icon">🎯</span> Priorizar Diagnóstico</h4>
+                        <p>Solicitar panel metabólico completo antes de iniciar suplementación. La evidencia bioquímica es fundamental.</p>
+                    </div>
+                    
+                    <div class="recomendacion">
+                        <h4><span class="recomendacion-icon">🍎</span> Enfoque Nutricional Primero</h4>
+                        <p>Optimizar patrón dietético antes de suplementar. Los alimentos enteros ofrecen matriz nutricional compleja.</p>
+                    </div>
+                    
+                    <div class="recomendacion">
+                        <h4><span class="recomendacion-icon">⚖️</span> Dosificación Terapéutica</h4>
+                        <p>Utilizar dosis farmacológicas solo en deficiencias confirmadas. Evitar megadosis sin justificación clínica.</p>
+                    </div>
+                    
+                    <div class="recomendacion">
+                        <h4><span class="recomendacion-icon">📊</span> Monitoreo Regular</h4>
+                        <p>Reevaluar niveles séricos cada 3-6 meses durante intervención. Ajustar protocolo según respuesta.</p>
+                    </div>
+                    
+                    <div class="recomendacion">
+                        <h4><span class="recomendacion-icon">⚕️</span> Supervisión Profesional</h4>
+                        <p>Consultar médico o nutricionista certificado. Evitar autodiagnóstico y autoprescripción.</p>
+                    </div>
+                    
+                    <div class="recomendacion">
+                        <h4><span class="recomendacion-icon">🔍</span> Calidad del Producto</h4>
+                        <p>Seleccionar productos con certificación USP, NSF o equivalente. Verificar biodisponibilidad de la forma química.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta">
+                <h3>Contribuye al Debate Científico</h3>
+                <p>Comparte tu experiencia clínica y mantente actualizado con evidencia reciente</p>
+                <div class="cta-buttons">
+                    <a href="https://facebook.com/sharer/sharer.php?u=" class="cta-button">🔄 Compartir en Facebook</a>
+                    <a href="https://twitter.com/intent/tweet?url=" class="cta-button">🐦 Compartir en Twitter</a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=" class="cta-button">💼 Compartir en LinkedIn</a>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <p><strong>Disclaimer:</strong> Contenido con fines educativos. No reemplaza consulta médica profesional. Basado en revisiones sistemáticas y guías clínicas actualizadas.</p>
+            </div>
+        </div>
+
+        <!-- VERSIÓN PÚBLICO GENERAL -->
+        <div id="general" class="infografia">
+            <div class="header">
+                <h1>Suplementación Inteligente</h1>
+                <p class="subtitle">¿Cuándo realmente necesitas vitaminas y minerales?</p>
+            </div>
+            
+            <div class="gancho">
+                <div class="gancho-content">
+                    <div class="confused-person">🤷</div>
+                    <div class="gancho-text">
+                        <h2>¿Te confunden tantas vitaminas?</h2>
+                        <p>La mitad de las personas toman suplementos, pero la mayoría NO los necesita. Muchos terminan gastando dinero en algo que su cuerpo ni siquiera usa. 💸</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mensaje-central">
+                <h3>La Verdad Simple</h3>
+                <p>Los suplementos NO son para todos. Tu cuerpo solo necesita vitaminas si realmente le faltan. Tomar de más puede ser tan malo como tener poco. ⚖️</p>
+            </div>
+            
+            <div class="proceso">
+                <h3>¿Cómo Saber si Necesitas Suplementos? 🤔</h3>
+                <div class="proceso-steps">
+                    <div class="step">
+                        <div class="step-icon">👨‍⚕️</div>
+                        <h4>Visita a tu Médico</h4>
+                        <p>Cuenta tus síntomas: ¿Te sientes cansado? ¿Se te cae el pelo? El doctor sabrá qué buscar.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">💉</div>
+                        <h4>Hazte Análisis</h4>
+                        <p>Un simple examen de sangre muestra qué vitaminas te faltan realmente. ¡Sin adivinar!</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">✅</div>
+                        <h4>Toma Solo lo Necesario</h4>
+                        <p>Si tienes deficiencia, tu médico te dirá exactamente qué tomar y cuánto.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="veredictos">
+                <h3>¿Qué Funciona y Qué No? 📋</h3>
+                <div class="veredictos-grid">
+                    <div class="veredicto-card">
+                        <div class="veredicto-icon check">✓</div>
+                        <div class="veredicto-content">
+                            <h4>Vitamina D si te falta ☀️</h4>
+                            <p>Si tus análisis muestran que está baja, tomarla te ayudará con tus huesos y defensas.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="veredicto-card">
+                        <div class="veredicto-icon check">✓</div>
+                        <div class="veredicto-content">
+                            <h4>Ácido fólico en embarazo 🤰</h4>
+                            <p>Súper importante para el bebé. Todas las embarazadas deben tomarlo desde el inicio.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="veredicto-card">
+                        <div class="veredicto-icon check">✓</div>
+                        <div class="veredicto-content">
+                            <h4>B12 si eres vegano 🌱</h4>
+                            <p>No hay B12 en plantas. Si no comes nada de origen animal, necesitas este suplemento sí o sí.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="veredicto-card">
+                        <div class="veredicto-icon check">✓</div>
+                        <div class="veredicto-content">
+                            <h4>Hierro si tienes anemia 🩸</h4>
+                            <p>Si te sientes débil y tus análisis muestran anemia, el hierro te ayudará a recuperarte.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="veredicto-card">
+                        <div class="veredicto-icon cross">✗</div>
+                        <div class="veredicto-content">
+                            <h4>Multivitamínicos "por si acaso" ❌</h4>
+                            <p>Si comes bien y estás sano, no necesitas multivitamínicos. Solo gastas dinero.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="veredicto-card">
+                        <div class="veredicto-icon cross">✗</div>
+                        <div class="veredicto-content">
+                            <h4>Vitamina E para el corazón 💔</h4>
+                            <p>No protege tu corazón. En dosis altas puede hasta ser dañina.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="veredicto-card">
+                        <div class="veredicto-icon cross">✗</div>
+                        <div class="veredicto-content">
+                            <h4>Vitamina C para los resfriados 🤧</h4>
+                            <p>No previene gripes ni resfriados. Apenas reduce un poquito los síntomas.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="veredicto-card">
+                        <div class="veredicto-icon cross">✗</div>
+                        <div class="veredicto-content">
+                            <h4>Calcio sin necesitarlo 🦴</h4>
+                            <p>Tomar calcio sin indicación médica puede ser malo para tu corazón. Mejor cómelo en alimentos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="recomendaciones">
+                <h3>Consejos Prácticos 💡</h3>
+                <div class="recomendaciones-list">
+                    <div class="recomendacion">
+                        <h4><span class="recomendacion-icon">🏥</span> Primero el Doctor</h4>
+                        <p>Nunca te automediques. Un profesional debe revisar tus análisis y decirte qué necesitas.</p>
+                    </div>
+                    
+                    <div class="recomendacion">
+                        <h4><span class="recomendacion-icon">🥗</span> Come Bien Primero</h4>
+                        <p>Una buena alimentación es mil veces mejor que cualquier pastilla. Las vitaminas vienen de la comida.</p>
+                    </div>
+                    
+                    <div class="recomendacion">
+                        <h4><span class="recomendacion-icon">⚠️</span> No Te Pases de Dosis</h4>
+                        <p>Más no es mejor. Demasiadas vitaminas pueden enfermarte. Sigue siempre las indicaciones.</p>
+                    </div>
+                    
+                    <div class="recomendacion">
+                        <h4><span class="recomendacion-icon">📅</span> Hazte Chequeos</h4>
+                        <p>Si tomas suplementos, repite tus análisis cada cierto tiempo para ver cómo vas.</p>
+                    </div>
+                    
+                    <div class="recomendacion">
+                        <h4><span class="recomendacion-icon">💰</span> No Creas Todo lo que Ves</h4>
+                        <p>Muchos productos prometen milagros. Si suena demasiado bueno, probablemente no es cierto.</p>
+                    </div>
+                    
+                    <div class="recomendacion">
+                        <h4><span class="recomendacion-icon">✨</span> Calidad Importa</h4>
+                        <p>Compra productos de marcas confiables. Lo barato puede salir caro si no funciona.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta">
+                <h3>¿Te Fue Útil Esta Info? 🙌</h3>
+                <p>Ayuda a más personas a tomar mejores decisiones sobre su salud</p>
+                <div class="cta-buttons">
+                    <a href="https://facebook.com/sharer/sharer.php?u=" class="cta-button">🔄 Compartir en Facebook</a>
+                    <a href="https://twitter.com/intent/tweet?url=" class="cta-button">🐦 Compartir en Twitter</a>
+                    <a href="https://wa.me/?text=" class="cta-button">📱 Compartir en WhatsApp</a>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <p><strong>Recuerda:</strong> Esta información es educativa. Siempre consulta con tu médico antes de tomar suplementos. Tu salud es lo más importante. 💚</p>
+            </div>
+        </div>
+
+        <!-- VERSIÓN REDES SOCIALES -->
+        <div id="social" class="infografia">
+            <div class="header">
+                <h1>💊 Suplementación Inteligente</h1>
+                <p class="subtitle">¿Los necesitas REALMENTE?</p>
+            </div>
+            
+            <div class="gancho">
+                <div class="gancho-content">
+                    <div class="confused-person">😵</div>
+                    <div class="gancho-text">
+                        <h2>STOP ✋ No compres más vitaminas</h2>
+                        <p>Hasta que leas esto... 👇 Podrías estar tirando tu dinero (y dañando tu salud)</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mensaje-central">
+                <h3>🎯 La Regla de Oro</h3>
+                <p>PRIMERO → Análisis de sangre<br>DESPUÉS → Suplementos específicos<br>NUNCA → "Por si acaso"</p>
+            </div>
+            
+            <div class="proceso">
+                <h3>Tu Plan en 3 Pasos 🚀</h3>
+                <div class="proceso-steps">
+                    <div class="step">
+                        <div class="step-icon">1️⃣</div>
+                        <h4>Visita Médica</h4>
+                        <p>Describe tus síntomas. No adivines.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">2️⃣</div>
+                        <h4>Análisis de Sangre</h4>
+                        <p>Descubre QUÉ te falta (si es que te falta algo).</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">3️⃣</div>
+                        <h4>Suplementa Smart</h4>
+                        <p>Solo lo que necesitas. Nada más.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="veredictos">
+                <h3>✅❌ Lo Que Dice la Ciencia</h3>
+                <div class="veredictos-grid">
+                    <div class="veredicto-card">
+                        <div class="veredicto-icon check">✓</div>
+                        <div class="veredicto-content">
+                            <h4>✅ Vitamina D (si está baja)</h4>
+                            <p>Tu aliada para huesos fuertes y sistema inmune en forma. Pero solo si te falta.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="veredicto-card">
+                        <div class="veredicto-icon check">✓</div>
+                        <div class="veredicto-content">
+                            <h4>✅ Ácido fólico (embarazo)</h4>
+                            <p>Protege a tu bebé. Esencial desde el día 1. No negociable 🤰</p>
+                        </div>
+                    </div>
+                    
+                    <div class="veredicto-card">
+                        <div class="veredicto-icon check">✓</div>
+                        <div class="veredicto-content">
+                            <h4>✅ B12 (veganos/vegetarianos)</h4>
+                            <p>Sin animales = sin B12. Tómala o arriesga tu salud 🌱</p>
+                        </div>
+                    </div>
+                    
+                    <div class="veredicto-card">
+                        <div class="veredicto-icon check">✓</div>
+                        <div class="veredicto-content">
+                            <h4>✅ Hierro (anemia confirmada)</h4>
+                            <p>¿Cansancio extremo? Puede ser anemia. Análisis primero ✓</p>
+                        </div>
+                    </div>
+                    
+                    <div class="veredicto-card">
+                        <div class="veredicto-icon cross">✗</div>
+                        <div class="veredicto-content">
+                            <h4>❌ Multivitamínicos genéricos</h4>
+                            <p>Literalmente tirando dinero al váter. La ciencia lo confirma 💸</p>
+                        </div>
+                    </div>
+                    
+                    <div class="veredicto-card">
+                        <div class="veredicto-icon cross">✗</div>
+                        <div class="veredicto-content">
+                            <h4>❌ Vitamina E "preventiva"</h4>
+                            <p>NO protege tu corazón. En exceso puede ser peligrosa ⚠️</p>
+                        </div>
+                    </div>
+                    
+                    <div class="veredicto-card">
+                        <div class="veredicto-icon cross">✗</div>
+                        <div class="veredicto-content">
+                            <h4>❌ Vitamina C vs resfriados</h4>
+                            <p>Spoiler: No funciona. Ahorra tu dinero 🤧</p>
+                        </div>
+                    </div>
+                    
+                    <div class="veredicto-card">
+                        <div class="veredicto-icon cross">✗</div>
+                        <div class="veredicto-content">
+                            <h4>❌ Calcio sin razón médica</h4>
+                            <p>Mejor cómelo. Las pastillas pueden dañar tu corazón 💔</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="recomendaciones">
+                <h3>🔥 Tips que Cambiarán tu Juego</h3>
+                <div class="recomendaciones-list">
+                    <div class="recomendacion">
+                        <h4><span class="recomendacion-icon">🎯</span> Análisis > Opiniones</h4>
+                        <p>Tu sangre no miente. Los influencers sí pueden. Prioriza ciencia.</p>
+                    </div>
+                    
+                    <div class="recomendacion">
+                        <h4><span class="recomendacion-icon">🍎</span> Comida Real First</h4>
+                        <p>Ninguna pastilla supera un plato de comida nutritiva. Facts.</p>
+                    </div>
+                    
+                    <div class="recomendacion">
+                        <h4><span class="recomendacion-icon">⚡</span> Menos es Más</h4>
+                        <p>Megadosis = mega problemas. Sigue las indicaciones médicas.</p>
+                    </div>
+                    
+                    <div class="recomendacion">
+                        <h4><span class="recomendacion-icon">📊</span> Trackea tus Niveles</h4>
+                        <p>Repite análisis cada 3-6 meses. Ajusta según resultados.</p>
+                    </div>
+                    
+                    <div class="recomendacion">
+                        <h4><span class="recomendacion-icon">🚫</span> Cero Autodiagnóstico</h4>
+                        <p>Google NO es doctor. Tu médico sí. Punto final.</p>
+                    </div>
+                    
+                    <div class="recomendacion">
+                        <h4><span class="recomendacion-icon">💎</span> Calidad > Precio</h4>
+                        <p>Marcas certificadas. Biodisponibilidad real. Invierte bien.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta">
+                <h3>🚀 ¿Listo para Cambiar el Game?</h3>
+                <p style="font-weight: bold;">Comparte esta verdad. Salva billeteras (y salud) 💪</p>
+                <div class="cta-buttons">
+                    <a href="https://facebook.com/sharer/sharer.php?u=" class="cta-button">🔄 Compartir en Facebook</a>
+                    <a href="https://www.instagram.com/" class="cta-button">📸 Compartir en Instagram</a>
+                    <a href="https://www.tiktok.com/" class="cta-button">🎵 Compartir en TikTok</a>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <p><strong>⚡ Real Talk:</strong> Esto es educación, no prescripción médica. Consulta profesionales. Tu salud merece expertos. 🩺</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Esperar a que el DOM esté completamente cargado
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // Función para cambiar de versión
+            function showVersion(versionId) {
+                // Ocultar todas las infografías
+                var infografias = document.querySelectorAll('.infografia');
+                for (var i = 0; i < infografias.length; i++) {
+                    infografias[i].classList.remove('active');
+                }
+                
+                // Mostrar la versión seleccionada
+                var selectedVersion = document.getElementById(versionId);
+                if (selectedVersion) {
+                    selectedVersion.classList.add('active');
+                }
+                
+                // Actualizar botones activos
+                var buttons = document.querySelectorAll('.version-selector button');
+                for (var j = 0; j < buttons.length; j++) {
+                    buttons[j].classList.remove('active');
+                }
+                
+                // Activar el botón correspondiente
+                var activeButton = document.getElementById('btn-' + versionId);
+                if (activeButton) {
+                    activeButton.classList.add('active');
+                }
+
+                // Scroll suave al inicio
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+            
+            // Agregar event listeners a los botones
+            document.getElementById('btn-profesional').addEventListener('click', function() {
+                showVersion('profesional');
+            });
+            
+            document.getElementById('btn-general').addEventListener('click', function() {
+                showVersion('general');
+            });
+            
+            document.getElementById('btn-social').addEventListener('click', function() {
+                showVersion('social');
+            });
+
+            // Actualizar URLs de compartir con la URL actual
+            var currentUrl = encodeURIComponent(window.location.href);
+            var shareButtons = document.querySelectorAll('.cta-button');
+            
+            for (var k = 0; k < shareButtons.length; k++) {
+                var button = shareButtons[k];
+                var href = button.getAttribute('href');
+                
+                if (href && href.indexOf('?u=') !== -1) {
+                    button.setAttribute('href', href + currentUrl);
+                } else if (href && href.indexOf('?url=') !== -1) {
+                    button.setAttribute('href', href + currentUrl);
+                } else if (href && href.indexOf('?text=') !== -1) {
+                    button.setAttribute('href', href + 'Mira esta guía sobre suplementación inteligente: ' + currentUrl);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
